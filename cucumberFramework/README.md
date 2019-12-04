@@ -1,6 +1,6 @@
 *************Prerequisite*************************************
-Eclipse
-JDK configured to Eclipse
+Eclipse,
+JDK configured to Eclipse,
 Maven
 
 ****************Set up and Run the Test Suite******************************
