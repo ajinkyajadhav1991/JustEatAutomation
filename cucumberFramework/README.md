@@ -11,7 +11,7 @@ Step 3: Right-click on POM.xml and Run As -> Maven clean
 Step 4: Right-click on POM.xml and Run As -> Maven install
 Step 5: Wait for automation script to finish running
 Step 6: Refresh the project in Eclipse and go to the location "target/cucumber-reports/advanced-reports/cucumber-html-reports/report-feature_findRestaurants-feature.html"
-Step 7: Open the html report using browser
+Step 7: Open the html report using browser to see the execution status
 
 ***********************Location of Feature file and Step Definition************************************
 
