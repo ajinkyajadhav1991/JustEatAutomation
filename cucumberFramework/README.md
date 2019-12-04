@@ -1,8 +1,12 @@
+*************Prerequisite*************************************
+Eclipse
+JDK configured to Eclipse
+Maven
 
 ****************Set up and Run the Test Suite******************************
 
-Step 1: You can clone the project 'cucumberFramework'
-Step 2: Import the project in Eclipse IDE as a Maven project
+Step 1: You can clone the project 'JustEatAutomation' from 'https://github.com/ajinkyajadhav1991/JustEatAutomation'
+Step 2: Import the project 'JustEatAutomation\cucumberFramework' in Eclipse IDE as a Maven project
 Step 3: Right-click on POM.xml and Run As -> Maven clean
 Step 4: Right-click on POM.xml and Run As -> Maven install
 Step 5: Wait for automation script to finish running
