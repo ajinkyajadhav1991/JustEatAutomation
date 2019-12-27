@@ -19,6 +19,7 @@ public class TestBase {
 			System.setProperty("webdriver.gecko.driver",
 					System.getProperty("user.dir") + "/src/test/resources/drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
+			
 		}
 
 		return driver;

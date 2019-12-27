@@ -3,6 +3,7 @@ package com.cucumberFramework.stepdefinitions;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import com.cucumberFramework.pageObjects.HomePage;
 import com.cucumberFramework.testBase.TestBase;
 
 import cucumber.api.java.en.Given;
@@ -10,6 +11,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class SearchRestaurantsStepDefinitions extends TestBase {
+	
+	HomePage homePage = new HomePage(driver);
 
 	@Given("^I navigate to the URL \"([^\"]*)\"$")
 	public void i_navigate_to_the_URL(String arg1) throws Throwable {
@@ -19,17 +22,18 @@ public class SearchRestaurantsStepDefinitions extends TestBase {
 	@Then("^I should see Just Eat Home Page$")
 	public void i_should_see_Just_Eat_Home_Page() throws Throwable {
 		//driver.findElement(By.xpath("/html/body/app/div/header/div[2]/a/svg")).isDisplayed();
-		driver.findElement(By.name("postcode")).isDisplayed();
+		//driver.findElement(By.name("postcode")).isDisplayed();
+		System.out.println("The text box is: "+homePage.isHomePageDisplayed());
 	}
 
 	@Then("^Enter post code text box displayed$")
 	public void enter_post_code_text_box_displayed() throws Throwable {
-		driver.findElement(By.name("postcode")).isDisplayed();
+		homePage.isHomePageDisplayed();
 	}
 
 	@Given("^I want food in \"([^\"]*)\"$")
 	public void i_want_food_in(String arg1) throws Throwable {
-		driver.findElement(By.name("postcode")).sendKeys(arg1);
+		homePage.searchPostCode(arg1);
 	}
 
 	@When("^I search for restaurants$")

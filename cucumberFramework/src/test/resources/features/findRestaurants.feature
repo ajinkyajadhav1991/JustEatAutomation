@@ -16,6 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
+
 @searchRestaurant
 Feature: Use the website to find restaurants
   So that I can order food
@@ -23,17 +24,17 @@ Feature: Use the website to find restaurants
   I want to be able to find restaurants in my area
 
   Background: User navigates to Application URL
-    Given I navigate to the URL "https://www.just-eat.co.uk/"
+    Given I navigate to the URL "https://www.just-eat.co.uk1/"
     Then I should see Just Eat Home Page
     And Enter post code text box displayed
 
-  @functional
+  @Regression
   Scenario: Search for restaurants in an area
     Given I want food in "AR51 1AA"
     When I search for restaurants
     Then I should see some restaurants in "AR51 1AA"
 
-  @functional
+  @Smoke
   Scenario Outline: Search for restaurants with invalid postcode
     Given I want food in "<postalCode>"
     When I search for restaurants
@@ -45,7 +46,7 @@ Feature: Use the website to find restaurants
       | AR51 1A%   |
       | AR51 123   |
 
-  @functional
+  @Smoke
   Scenario: Search for restaurants by keeping postal code blank
     Given I want food in ""
     When I search for restaurants
